@@ -6,7 +6,7 @@ class OptionModel extends Model
 {
     protected $table      = 'QUESTION_OPTIONS';
     protected $primaryKey = 'ID';
-    protected $allowedFields = ['QUESTION_ID', 'OPTION_TEXT', 'ORDER_NO'];
+    protected $allowedFields = ['QUESTION_ID', 'OPTION_TEXT', 'ORDER_BY'];
 
     public $useAutoIncrement = true;
     public $returnType       = 'array';

@@ -1,0 +1,32 @@
+FROM php:8.2-apache
+
+# Install necessary system packages
+RUN apt-get update && apt-get install -y libaio1 unzip libzip-dev zip wget \
+    && docker-php-ext-install pdo pdo_mysql mysqli zip
+
+# Install Oracle Instant Client (manually place the zip in project root)
+COPY instantclient-basiclite-linux.x64-21.1.0.0.0.zip /tmp/
+WORKDIR /tmp
+
+RUN unzip instantclient-basiclite-linux.x64-21.1.0.0.0.zip && \
+    mkdir -p /opt/oracle && \
+    mv instantclient_21_1 /opt/oracle/instantclient && \
+    echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf && \
+    ldconfig
+
+# Enable oci8 driver
+RUN docker-php-ext-configure oci8 --with-oci8=instantclient,/opt/oracle/instantclient && \
+    docker-php-ext-install oci8
+
+# Apache configuration
+COPY apache.conf /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite
+
+# Copy source code
+COPY . /var/www/html/
+WORKDIR /var/www/html/
+
+# Permissions
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html/writable
+
+EXPOSE 80

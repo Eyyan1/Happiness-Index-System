@@ -1,6 +1,5 @@
-
 <div class="container mt-4">
-  <h4>Edit Survey</h4>
+  <h4 class="mb-4"><strong>Edit Survey</strong></h4>
 
   <?php if (session()->getFlashdata('error')): ?>
     <div class="alert alert-danger">
@@ -12,8 +11,8 @@
     <?= csrf_field() ?>
 
     <!-- Title -->
-    <div class="form-group">
-      <label for="title">Title</label>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
       <input
         type="text"
         name="title"
@@ -25,8 +24,8 @@
     </div>
 
     <!-- Start Date -->
-    <div class="form-group">
-      <label for="start_date">Start Date</label>
+    <div class="mb-3">
+      <label for="start_date" class="form-label">Start Date</label>
       <input
         type="date"
         name="start_date"
@@ -38,8 +37,8 @@
     </div>
 
     <!-- End Date -->
-    <div class="form-group">
-      <label for="end_date">End Date</label>
+    <div class="mb-3">
+      <label for="end_date" class="form-label">End Date</label>
       <input
         type="date"
         name="end_date"
@@ -51,13 +50,14 @@
     </div>
 
     <!-- Description -->
-    <div class="form-group">
-      <label for="description">Description</label>
+    <div class="mb-4">
+      <label for="description" class="form-label">Description</label>
       <textarea
         name="description"
         id="description"
         class="form-control"
-        rows="3"
+        rows="4"
+        required
       ><?= esc($survey['DESCRIPTION']) ?></textarea>
     </div>
 

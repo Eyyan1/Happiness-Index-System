@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  his-web:
+    build: .
+    container_name: his-web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - his-db
+    networks:
+      - his-network
+
+  his-db:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: his-db
+    environment:
+      ORACLE_PASSWORD: root
+      APP_USER: survey_db
+      APP_USER_PASSWORD: survey_db_pwd
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    networks:
+      - his-network
+
+volumes:
+  oracle_data:
+
+networks:
+  his-network:

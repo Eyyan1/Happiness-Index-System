@@ -32,6 +32,9 @@ $routes->get('survey/show/(:num)', 'Survey::show/$1');  // View single survey
 $routes->post('survey/update/(:num)', 'Survey::update/$1');
 $routes->post('question/create', 'Question::create');
 $routes->delete('question/delete/(:num)', 'Question::delete/$1');
+$routes->post('question/delete/(:num)', 'Question::delete/$1');
+$routes->post('question/remove/(:num)', 'Question::remove/$1');
+
 
 // Optional test route (safe fallback)
 $routes->get('survey/test', function () {

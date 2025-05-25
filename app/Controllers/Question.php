@@ -9,24 +9,48 @@ class Question extends Controller
     public function index()
     {
         $model = new QuestionModel();
+        $questions = $model->findAll();
+
+        // Optional: Convert CLOBs if needed
+        foreach ($questions as &$q) {
+            if (is_object($q['QUESTION']) && method_exists($q['QUESTION'], 'read')) {
+                $q['QUESTION'] = $q['QUESTION']->read($q['QUESTION']->size());
+            }
+        }
+
         return view('templates/header')
-            . view('question/index', ['questions' => $model->findAll()])
+            . view('question/index', ['questions' => $questions])
             . view('templates/footer');
     }
 
     public function show($id = null)
     {
+        if (!is_numeric($id)) {
+            return redirect()->to('/question')->with('error', 'Invalid question ID.');
+        }
+
         $model = new QuestionModel();
-        $data['question'] = $model->find($id);
+        $question = $model->find((int)$id);
+
+        // Convert CLOB
+        if (is_object($question['QUESTION']) && method_exists($question['QUESTION'], 'read')) {
+            $question['QUESTION'] = $question['QUESTION']->read($question['QUESTION']->size());
+        }
+
         return view('templates/header')
-            . view('question/show', $data)
+            . view('question/show', ['question' => $question])
             . view('templates/footer');
     }
 
     public function edit($id = null)
     {
+        if (!is_numeric($id)) {
+            return redirect()->to('/question')->with('error', 'Invalid question ID.');
+        }
+
         $model = new QuestionModel();
-        $data['question'] = $model->find($id);
+        $data['question'] = $model->find((int)$id);
+
         return view('templates/header')
             . view('question/edit', $data)
             . view('templates/footer');
@@ -34,142 +58,134 @@ class Question extends Controller
 
     public function update($id = null)
     {
+        if (!is_numeric($id)) {
+            return redirect()->to('/question')->with('error', 'Invalid ID.');
+        }
+
         $model = new QuestionModel();
-        $model->update($id, $this->request->getPost());
+        $model->update((int)$id, $this->request->getPost());
+
         return redirect()->to('/question');
     }
 
-    public function delete($id = null)
-{
-    // Fallback: read ID from URL manually if not passed
-    if (!$id && is_numeric($this->request->uri->getSegment(3))) {
-        $id = (int) $this->request->uri->getSegment(3);
-    }
+    public function remove($id = null)
+    {
+        if (!is_numeric($id)) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Invalid ID']);
+        }
 
-    if (!is_numeric($id)) {
-        return $this->response->setJSON(['success' => false, 'message' => 'Invalid ID']);
-    }
+        $questionModel = new QuestionModel();
+        $optionModel = new QuestionOptionModel();
 
-    $model = new \App\Models\QuestionModel();
-    $optionModel = new \App\Models\OptionModel();
+        try {
+            $optionModel->where('QUESTION_ID', (int)$id)->delete();
+            $questionModel->delete((int)$id);
 
-    try {
-        $optionModel->where('QUESTION_ID', $id)->delete();
-        $model->delete($id);
-
-        return $this->response->setJSON(['success' => true]);
-    } catch (\Throwable $e) {
-        return $this->response->setJSON([
-            'success' => false,
-            'message' => 'Error deleting question.',
-            'error' => $e->getMessage()
-        ]);
-    }
-}
-
-
-    // AJAX save method using separate table for options
-   public function create()
-{
-    try {
-        $json = $this->request->getJSON(true);
-
-        if (!$json || empty($json['question']) || empty($json['type']) || empty($json['survey_id'])) {
+            return $this->response->setJSON(['success' => true, 'message' => '✅ Deleted']);
+        } catch (\Throwable $e) {
             return $this->response->setJSON([
                 'success' => false,
-                'message' => 'Missing required fields.'
+                'message' => '❌ Deletion failed.',
+                'error' => $e->getMessage()
             ]);
         }
+    }
 
-        $questionText = $json['question'];
-        $questionType = $json['type'];
-        $optionsArray = $json['options'] ?? [];
-        $surveyId     = (int) $json['survey_id'];
-        $order        = 1;
-        $createdAt    = date('Y-m-d H:i:s');
+    public function create()
+    {
+        try {
+            $json = $this->request->getJSON(true);
 
-        $conn = oci_connect('survey_db', 'survey_db_pwd', 'localhost/XEPDB1', 'AL32UTF8');
-        if (!$conn) {
-            $err = oci_error();
-            return $this->response->setJSON(['success' => false, 'message' => '❌ Oracle DB connection failed', 'error' => $err['message']]);
-        }
+            if (!$json || empty($json['question']) || empty($json['type']) || empty($json['survey_id'])) {
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => 'Missing required fields.'
+                ]);
+            }
 
-        // Insert question
-        $sql = "INSERT INTO QUESTIONS (
-                    ID, QUESTION, TYPE, ORDER_BY, SURVEY_ID, DATE_CREATED
-                ) VALUES (
-                    QUESTION_SEQ.NEXTVAL, :question, :type, :order_by, :survey_id,
-                    TO_TIMESTAMP(:created_at, 'YYYY-MM-DD HH24:MI:SS')
-                )
-                RETURNING ID INTO :new_id";
+            $questionText = $json['question'];
+            $questionType = $json['type'];
+            $optionsArray = $json['options'] ?? [];
+            $surveyId     = (int)$json['survey_id'];
+            $order        = 1;
+            $createdAt    = date('Y-m-d H:i:s');
 
-        $stmt = oci_parse($conn, $sql);
-        oci_bind_by_name($stmt, ':question', $questionText);
-        oci_bind_by_name($stmt, ':type', $questionType);
-        oci_bind_by_name($stmt, ':order_by', $order);
-        oci_bind_by_name($stmt, ':survey_id', $surveyId);
-        oci_bind_by_name($stmt, ':created_at', $createdAt);
-        oci_bind_by_name($stmt, ':new_id', $newQuestionId, 10);
+            $conn = oci_connect('survey_db', 'survey_db_pwd', 'localhost/XEPDB1', 'AL32UTF8');
+            if (!$conn) {
+                $err = oci_error();
+                return $this->response->setJSON(['success' => false, 'message' => '❌ Oracle DB connection failed', 'error' => $err['message']]);
+            }
 
-        if (!oci_execute($stmt, OCI_NO_AUTO_COMMIT)) {
-            $e = oci_error($stmt);
-            oci_rollback($conn);
-            oci_free_statement($stmt);
-            oci_close($conn);
-            return $this->response->setJSON([
-                'success' => false,
-                'message' => '❌ Failed to insert question',
-                'error'   => $e['message']
-            ]);
-        }
+            $sql = "INSERT INTO QUESTIONS (
+                        ID, QUESTION, TYPE, ORDER_BY, SURVEY_ID, DATE_CREATED
+                    ) VALUES (
+                        QUESTION_SEQ.NEXTVAL, :question, :type, :order_by, :survey_id,
+                        TO_TIMESTAMP(:created_at, 'YYYY-MM-DD HH24:MI:SS')
+                    )
+                    RETURNING ID INTO :new_id";
 
-        // Insert options
-        foreach ($optionsArray as $index => $optText) {
-            $optStmt = oci_parse($conn, "INSERT INTO QUESTION_OPTIONS (
-                ID, QUESTION_ID, OPTION_TEXT, ORDER_BY
-            ) VALUES (
-                QUESTION_OPTIONS_SEQ.NEXTVAL, :qid, :opt, :ord
-            )");
+            $stmt = oci_parse($conn, $sql);
+            oci_bind_by_name($stmt, ':question', $questionText);
+            oci_bind_by_name($stmt, ':type', $questionType);
+            oci_bind_by_name($stmt, ':order_by', $order);
+            oci_bind_by_name($stmt, ':survey_id', $surveyId);
+            oci_bind_by_name($stmt, ':created_at', $createdAt);
+            oci_bind_by_name($stmt, ':new_id', $newQuestionId, 10);
 
-            $orderNo = $index + 1;
-            oci_bind_by_name($optStmt, ':qid', $newQuestionId);
-            oci_bind_by_name($optStmt, ':opt', $optText);
-            oci_bind_by_name($optStmt, ':ord', $orderNo);
-
-            if (!oci_execute($optStmt, OCI_NO_AUTO_COMMIT)) {
-                $e = oci_error($optStmt);
+            if (!oci_execute($stmt, OCI_NO_AUTO_COMMIT)) {
+                $e = oci_error($stmt);
                 oci_rollback($conn);
-                oci_free_statement($optStmt);
                 oci_free_statement($stmt);
                 oci_close($conn);
                 return $this->response->setJSON([
                     'success' => false,
-                    'message' => '❌ Failed to insert option',
+                    'message' => '❌ Failed to insert question',
                     'error'   => $e['message']
                 ]);
             }
 
-            oci_free_statement($optStmt);
+            foreach ($optionsArray as $index => $optText) {
+                $optStmt = oci_parse($conn, "INSERT INTO QUESTION_OPTIONS (
+                    ID, QUESTION_ID, OPTION_TEXT, ORDER_BY
+                ) VALUES (
+                    QUESTION_OPTIONS_SEQ.NEXTVAL, :qid, :opt, :ord
+                )");
+
+                $orderNo = $index + 1;
+                oci_bind_by_name($optStmt, ':qid', $newQuestionId);
+                oci_bind_by_name($optStmt, ':opt', $optText);
+                oci_bind_by_name($optStmt, ':ord', $orderNo);
+
+                if (!oci_execute($optStmt, OCI_NO_AUTO_COMMIT)) {
+                    $e = oci_error($optStmt);
+                    oci_rollback($conn);
+                    oci_free_statement($optStmt);
+                    oci_free_statement($stmt);
+                    oci_close($conn);
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'message' => '❌ Failed to insert option',
+                        'error'   => $e['message']
+                    ]);
+                }
+
+                oci_free_statement($optStmt);
+            }
+
+            oci_commit($conn);
+            oci_free_statement($stmt);
+            oci_close($conn);
+
+            return $this->response->setJSON([
+                'success' => true,
+                'message' => '✅ Question and options saved successfully!'
+            ]);
+        } catch (\Throwable $e) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => '❌ Exception thrown',
+                'error'   => $e->getMessage()
+            ]);
         }
-
-        oci_commit($conn);
-        oci_free_statement($stmt);
-        oci_close($conn);
-
-        return $this->response->setJSON([
-            'success' => true,
-            'message' => '✅ Question and options saved successfully!'
-        ]);
-
-    } catch (\Throwable $e) {
-        return $this->response->setJSON([
-            'success' => false,
-            'message' => '❌ Exception thrown',
-            'error'   => $e->getMessage()
-        ]);
     }
-}
-
-
-
 }
