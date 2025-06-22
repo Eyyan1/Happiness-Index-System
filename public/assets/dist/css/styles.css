@@ -1,0 +1,105 @@
+/* ── Toasts & SweetAlerts ───────────────────────────────────────────────── */
+.toast {
+  display: none;
+  min-width: 20vw;
+}
+.toast.show {
+  display: block;
+  opacity: 1;
+  position: fixed;
+  z-index: 99999999;
+  margin: 20px;
+  right: 0;
+  top: 3.5rem;
+}
+.swal2-container {
+  z-index: 99999999;
+}
+
+/* ── Preloader Overlay ─────────────────────────────────────────────────── */
+#preloader2 {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: rgba(255,255,255,0.51);
+}
+#preloader2:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1977cc;
+  border-top-color: #d1e6f9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+@keyframes animate-preloader {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── Text Truncation Utility ───────────────────────────────────────────── */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: smaller;
+  color: rgba(0,0,0,0.8);
+  font-style: italic;
+}
+
+/* ── Large / Mid-Large Modal Dialogs ──────────────────────────────────── */
+.modal-dialog.large {
+  width: 80% !important;
+  max-width: none;
+}
+.modal-dialog.mid-large {
+  width: 50% !important;
+  max-width: none;
+}
+
+/* ── Full-Screen Viewer Modal ─────────────────────────────────────────── */
+#viewer_modal .btn-close {
+  position: absolute;
+  z-index: 999999;
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 27px;
+  top: 0;
+}
+#viewer_modal .modal-dialog {
+  width: 80%;
+  height: 90%;
+  max-width: none;
+  max-height: none;
+}
+#viewer_modal .modal-content {
+  background: #000;
+  border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#viewer_modal img,
+#viewer_modal video {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* ── Hide Sidebar on “login” or other full-width pages ─────────────────── */
+/* add a `sidebar-hidden` class to <body> when you want the sidebar gone */
+.sidebar-hidden .main-sidebar,
+.sidebar-hidden .wrapper .main-sidebar {
+  display: none !important;
+}
+.sidebar-hidden .content-wrapper,
+.sidebar-hidden .wrapper .content-wrapper {
+  margin-left: 0 !important;
+}

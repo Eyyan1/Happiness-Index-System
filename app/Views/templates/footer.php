@@ -33,7 +33,7 @@
     foreach ($iterator as $file) {
       if ($file->isFile() && strtolower($file->getExtension()) === 'js') {
         $relative = str_replace([FCPATH, '\\'], ['', '/'], $file->getPathname());
-        // Skip jQuery, Bootstrap, AdminLTE, and DataTables since they're already loaded
+        // Skip ones already loaded above
         if (preg_match('#/(jquery|bootstrap|overlayScrollbars|adminlte|datatables)/#', $relative)) {
           continue;
         }
@@ -42,5 +42,22 @@
     }
   }
 ?>
+
+<script>
+$(function(){
+  // … your other page-specific scripts …
+
+  // Mark all unread notifications as read when bell icon is clicked
+  $('.main-header .fa-bell').closest('a').on('click', function() {
+    fetch("<?= site_url('notifications/mark-read') ?>", {
+      method: 'POST',
+      headers: { 'X-Requested-With': 'XMLHttpRequest' }
+    }).then(() => {
+      // remove the little badge count
+      $(this).find('.navbar-badge').remove();
+    });
+  });
+});
+</script>
 </body>
 </html>

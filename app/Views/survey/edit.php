@@ -58,7 +58,7 @@
         class="form-control"
         rows="4"
         required
-      ><?= esc($survey['DESCRIPTION']) ?></textarea>
+      ><?= esc(is_object($survey['DESCRIPTION']) ? $survey['DESCRIPTION']->read($survey['DESCRIPTION']->size()) : $survey['DESCRIPTION']) ?></textarea>
     </div>
 
     <button type="submit" class="btn btn-success">Update</button>

@@ -24,27 +24,27 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    public array $default = [
-        'DSN'       => '',                             // leave blank for simple host/service
-        'hostname'  => 'host.docker.internal/XEPDB1',  // <host>/<service> from your sqlplus test
-        'username'  => 'survey_db',                    // exactly your schema user
-        'password'  => 'survey_db_pwd',                // exactly its password
-        'database'  => '',                             // unused by OCI8
-        'DBDriver'  => 'OCI8',
-        'DBPrefix'  => '',
-        'pConnect'  => false,
-        'DBDebug'   => (ENVIRONMENT !== 'production'),
-        'charset'   => 'AL32UTF8',
-        'DBCollat'  => 'AL32UTF8_GENERAL_CI',
-        'swapPre'   => '',
-        'encrypt'   => false,
-        'compress'  => false,
-        'strictOn'  => false,
-        'failover'  => [],
-        'port'      => 1521,
-        // leave numberNative and dateFormat as defaults
-    ];
-    
+public array $default = [
+    'DSN'       => '',
+    'hostname' => '//127.0.0.1:49161/xepdb1',
+    'username'  => 'pita207',
+    'password'  => 'pita207',
+    'database'  => '',                                // Unused for OCI8
+    'DBDriver'  => 'OCI8',
+    'DBPrefix'  => '',
+    'pConnect'  => false,
+    'DBDebug'   => (ENVIRONMENT !== 'production'),
+    'charset'   => 'AL32UTF8',
+    'DBCollat'  => 'AL32UTF8_GENERAL_CI',
+    'strictOn'  => false,
+    'failover'  => [],
+];
+
+
+
+
+
+
     
     
     //    /**

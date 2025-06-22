@@ -9,7 +9,8 @@ class QuestionOptionModel extends Model
 
     protected $allowedFields = [
         'QUESTION_ID',
-        'OPTION_TEXT'
+        'OPTION_TEXT',
+        'ORDER_BY'
     ];
 
     public $useTimestamps = false;

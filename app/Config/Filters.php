@@ -12,8 +12,8 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
-//use App\Filters\AuthFilter;
-
+use App\Filters\Auth;
+use App\Filters\RoleFilter;
 
 class Filters extends BaseFilters
 {
@@ -27,12 +27,17 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
-        //'auth'          => \App\Filters\AuthFilter::class,
-
+        'auth'          => Auth::class,
+        'role'          => RoleFilter::class,
     ];
 
-   
-    public array $methods = [];
+    // You can also apply filters by HTTP method if needed:
+    public array $methods = [
+        // 'post' => ['csrf', 'invalidchars'],
+    ];
 
-    public array $filters = [];
+    // Global filter rules (if you want auth on every page):
+    public array $filters = [
+        // 'auth' => ['except' => ['login/*', 'register/*', '/', 'home']],
+    ];
 }

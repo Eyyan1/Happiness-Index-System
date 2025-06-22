@@ -1,0 +1,192 @@
+CRITICAL - 2025-06-11 20:42:25 --> Error: Class "App\Controllers\SectionModel" not found
+[Method: POST, Route: section/update/1]
+in APPPATH\Controllers\Section.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->update()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-06-11 20:42:35 --> Error: Class "App\Controllers\SectionModel" not found
+[Method: POST, Route: section/update/1]
+in APPPATH\Controllers\Section.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->update()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-06-11 20:42:59 --> Error: Class "App\Controllers\SectionModel" not found
+[Method: POST, Route: section/update/1]
+in APPPATH\Controllers\Section.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->update()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-06-11 20:43:20 --> Error: Class "App\Controllers\SectionModel" not found
+[Method: POST, Route: section/update/1]
+in APPPATH\Controllers\Section.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->update()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-06-11 20:47:24 --> Error: Class "App\Controllers\SectionModel" not found
+[Method: POST, Route: section/update/1]
+in APPPATH\Controllers\Section.php on line 138.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->update()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-06-11 20:49:34 --> ErrorException: oci_execute(): ORA-02292: integrity constraint (PITA207.FK_QUESTION_SECTION) violated - child record found in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Builder.php(175): CodeIgniter\Database\BaseBuilder->delete()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\OCI8\Builder->delete()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(1157): CodeIgniter\Model->doDelete()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Section.php(119): CodeIgniter\BaseModel->delete()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Section->delete()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-06-11 20:52:50 --> ErrorException: oci_execute(): ORA-02292: integrity constraint (PITA207.FK_QUESTION_SECTION) violated - child record found in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Builder.php(175): CodeIgniter\Database\BaseBuilder->delete()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\OCI8\Builder->delete()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(1157): CodeIgniter\Model->doDelete()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Section.php(119): CodeIgniter\BaseModel->delete()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Section->delete()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-06-11 20:54:12 --> ErrorException: oci_execute(): ORA-02292: integrity constraint (PITA207.FK_QUESTION_SECTION) violated - child record found in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2848): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Builder.php(175): CodeIgniter\Database\BaseBuilder->delete()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(521): CodeIgniter\Database\OCI8\Builder->delete()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(1157): CodeIgniter\Model->doDelete()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Section.php(119): CodeIgniter\BaseModel->delete()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Section->delete()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-06-11 21:02:36 --> Error: Class "App\Controllers\Database" not found
+[Method: POST, Route: section/delete/15]
+in APPPATH\Controllers\Section.php on line 123.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-06-11 21:02:53 --> Error: Class "App\Controllers\Database" not found
+[Method: POST, Route: section/delete/17]
+in APPPATH\Controllers\Section.php on line 123.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Section->delete()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-06-11 21:11:22 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Answer.php(100): CodeIgniter\Model->insert()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Answer->saveAnswer()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-06-11 21:11:22 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Answer.php(100): CodeIgniter\Model->insert()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Answer->saveAnswer()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-06-11 21:11:22 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Answer.php(100): CodeIgniter\Model->insert()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Answer->saveAnswer()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-06-11 21:27:54 --> ErrorException: Cannot redeclare App\Controllers\Answer::saveAnswer()
+[Method: GET, Route: answer]
+in APPPATH\Controllers\Answer.php on line 127.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-06-11 21:30:51 --> ErrorException: Cannot redeclare App\Controllers\Answer::saveAnswer()
+[Method: GET, Route: answer]
+in APPPATH\Controllers\Answer.php on line 127.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

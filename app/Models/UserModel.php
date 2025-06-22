@@ -4,28 +4,19 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'USERS';
+    protected $table      = 'USERSS';
     protected $primaryKey = 'ID';
-    protected $allowedFields = ['FIRSTNAME', 'LASTNAME', 'EMAIL', 'PASSWORD', 'TYPE', 'DATE_CREATED'];
+    protected $returnType = 'array';
 
-    public function authenticate($email, $password)
-    {
-        $user = $this->where('EMAIL', $email)->first();
-    
-        if ($user) {
-            echo "DB Password: " . $user['PASSWORD'] . "<br>";
-            echo "Input Password: " . $password . "<br>";
-    
-            if (password_verify($password, $user['PASSWORD'])) {
-                echo "✔ password verified";
-                return $user;
-            } else {
-                echo "❌ password mismatch";
-            }
-        } else {
-            echo "❌ user not found";
-        }
-    
-        exit;
-    }
-}    
+    protected $allowedFields = [
+        'FIRSTNAME', 'LASTNAME', 'MIDDLENAME',
+        'CONTACT', 'ADDRESS',
+        'EMAIL', 'PASSWORD', 'TYPE',
+        'AGE_GROUP','GENDER','RELIGION','ETHNICITY',
+        'MARITAL_STATUS','CHILDREN_COUNT','EDUCATION_LEVEL',
+        'JOB_BAND','SERVICE_DURATION','SALARY_RANGE','HOUSEHOLD_INCOME'
+    ];
+
+    // disable automatic escaping so Oracle uppercases your table/fields correctly
+     protected $escapeIdentifiers = false;
+}

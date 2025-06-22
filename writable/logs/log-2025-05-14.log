@@ -1,0 +1,90 @@
+ERROR - 2025-05-14 00:05:09 --> ErrorException: oci_execute(): ORA-01722: invalid number in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind()
+#7 C:\Users\USER\HappinessIndexCI\app\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Survey->show()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-05-14 00:05:09 --> Error: Call to a member function getFirstRow() on false
+[Method: GET, Route: survey/create]
+in SYSTEMPATH\Model.php on line 211.
+ 1 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind()
+ 2 APPPATH\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->show()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-05-14 00:08:15 --> ErrorException: oci_execute(): ORA-01722: invalid number in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind()
+#7 C:\Users\USER\HappinessIndexCI\app\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Survey->show()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-05-14 00:08:15 --> Error: Call to a member function getFirstRow() on false
+[Method: GET, Route: survey/create]
+in SYSTEMPATH\Model.php on line 211.
+ 1 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind()
+ 2 APPPATH\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->show()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-05-14 00:08:49 --> ErrorException: oci_execute(): ORA-01722: invalid number in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind()
+#7 C:\Users\USER\HappinessIndexCI\app\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Survey->show()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-05-14 00:08:49 --> Error: Call to a member function getFirstRow() on false
+[Method: GET, Route: survey/create]
+in SYSTEMPATH\Model.php on line 211.
+ 1 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind()
+ 2 APPPATH\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->show()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')

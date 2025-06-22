@@ -12,7 +12,8 @@ class QuestionModel extends Model
         'TYPE',
         'ORDER_BY',
         'SURVEY_ID',
-        'DATE_CREATED'
+        'DATE_CREATED',
+        'SECTION_ID'
     ];
 
     public $useTimestamps = false;

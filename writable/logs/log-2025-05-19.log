@@ -1,0 +1,279 @@
+CRITICAL - 2025-05-19 10:09:04 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: GET, Route: survey/7]
+in APPPATH\Models\OptionModel.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-19 10:10:39 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 10:10:49 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 10:35:22 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 10:35:22 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 16:11:36 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 76.
+ 1 APPPATH\Controllers\Question.php(76): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 16:11:36 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 76.
+ 1 APPPATH\Controllers\Question.php(76): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:19:57 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:19:57 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:20:04 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:20:04 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:25:21 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:25:21 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:41:09 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 17:41:09 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:23:05 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:23:05 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:39:18 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:39:18 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 79.
+ 1 APPPATH\Controllers\Question.php(79): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-05-19 18:39:27 --> ErrorException: oci_execute(): ORA-01722: invalid number in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind()
+#7 C:\Users\USER\HappinessIndexCI\app\Controllers\Question.php(20): CodeIgniter\BaseModel->find()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Question->show()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-05-19 18:39:27 --> Error: Call to a member function getFirstRow() on false
+[Method: GET, Route: question/create]
+in SYSTEMPATH\Model.php on line 211.
+ 1 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind()
+ 2 APPPATH\Controllers\Question.php(20): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->show()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:46:56 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: survey/create]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON()
+ 2 APPPATH\Controllers\Survey.php(69): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 18:55:49 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: survey/create]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON()
+ 2 APPPATH\Controllers\Survey.php(69): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 19:20:27 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: survey/create]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON()
+ 2 APPPATH\Controllers\Survey.php(69): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-19 20:41:18 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: survey/create]
+in APPPATH\Controllers\Survey.php on line 96.
+ 1 APPPATH\Controllers\Survey.php(96): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')

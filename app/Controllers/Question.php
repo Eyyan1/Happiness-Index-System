@@ -11,12 +11,16 @@ class Question extends Controller
         $model = new QuestionModel();
         $questions = $model->findAll();
 
-        // Optional: Convert CLOBs if needed
+        // Convert CLOB if needed
         foreach ($questions as &$q) {
             if (is_object($q['QUESTION']) && method_exists($q['QUESTION'], 'read')) {
-                $q['QUESTION'] = $q['QUESTION']->read($q['QUESTION']->size());
+                $len = $q['QUESTION']->size();
+                $q['QUESTION'] = $len > 0 ? $q['QUESTION']->read($len) : '';
             }
         }
+
+        // Debug (optional)
+        // echo '<pre>'; print_r($questions); echo '</pre>'; exit;
 
         return view('templates/header')
             . view('question/index', ['questions' => $questions])
@@ -34,7 +38,8 @@ class Question extends Controller
 
         // Convert CLOB
         if (is_object($question['QUESTION']) && method_exists($question['QUESTION'], 'read')) {
-            $question['QUESTION'] = $question['QUESTION']->read($question['QUESTION']->size());
+            $len = $question['QUESTION']->size();
+            $question['QUESTION'] = $len > 0 ? $question['QUESTION']->read($len) : '';
         }
 
         return view('templates/header')
@@ -96,39 +101,45 @@ class Question extends Controller
         try {
             $json = $this->request->getJSON(true);
 
-            if (!$json || empty($json['question']) || empty($json['type']) || empty($json['survey_id'])) {
+            if (!$json || empty($json['survey_id']) || empty($json['section_id']) || empty($json['question']) || empty($json['type'])) {
                 return $this->response->setJSON([
                     'success' => false,
                     'message' => 'Missing required fields.'
                 ]);
             }
 
-            $questionText = $json['question'];
-            $questionType = $json['type'];
-            $optionsArray = $json['options'] ?? [];
-            $surveyId     = (int)$json['survey_id'];
-            $order        = 1;
-            $createdAt    = date('Y-m-d H:i:s');
+            $surveyId  = (int)$json['survey_id'];
+            $sectionId = (int)$json['section_id'];
+            $question  = $json['question'];
+            $type      = $json['type'];
+            $options   = $json['options'] ?? [];
+            $order     = 1;
+            $createdAt = date('Y-m-d H:i:s');
 
-            $conn = oci_connect('survey_db', 'survey_db_pwd', 'localhost/XEPDB1', 'AL32UTF8');
+            $conn = oci_connect('pita207', 'pita207', 'localhost/XEPDB1', 'AL32UTF8');
             if (!$conn) {
                 $err = oci_error();
-                return $this->response->setJSON(['success' => false, 'message' => '❌ Oracle DB connection failed', 'error' => $err['message']]);
+                return $this->response->setJSON([
+                    'success' => false,
+                    'message' => '❌ Oracle DB connection failed',
+                    'error'   => $err['message']
+                ]);
             }
 
             $sql = "INSERT INTO QUESTIONS (
-                        ID, QUESTION, TYPE, ORDER_BY, SURVEY_ID, DATE_CREATED
+                        ID, SECTION_ID, SURVEY_ID, QUESTION, TYPE, ORDER_BY, DATE_CREATED
                     ) VALUES (
-                        QUESTION_SEQ.NEXTVAL, :question, :type, :order_by, :survey_id,
+                        QUESTION_SEQ.NEXTVAL, :section_id, :survey_id, :question, :type, :order_by,
                         TO_TIMESTAMP(:created_at, 'YYYY-MM-DD HH24:MI:SS')
                     )
                     RETURNING ID INTO :new_id";
 
             $stmt = oci_parse($conn, $sql);
-            oci_bind_by_name($stmt, ':question', $questionText);
-            oci_bind_by_name($stmt, ':type', $questionType);
-            oci_bind_by_name($stmt, ':order_by', $order);
+            oci_bind_by_name($stmt, ':section_id', $sectionId);
             oci_bind_by_name($stmt, ':survey_id', $surveyId);
+            oci_bind_by_name($stmt, ':question', $question);
+            oci_bind_by_name($stmt, ':type', $type);
+            oci_bind_by_name($stmt, ':order_by', $order);
             oci_bind_by_name($stmt, ':created_at', $createdAt);
             oci_bind_by_name($stmt, ':new_id', $newQuestionId, 10);
 
@@ -137,24 +148,26 @@ class Question extends Controller
                 oci_rollback($conn);
                 oci_free_statement($stmt);
                 oci_close($conn);
+
                 return $this->response->setJSON([
                     'success' => false,
-                    'message' => '❌ Failed to insert question',
+                    'message' => '❌ Failed to insert question.',
                     'error'   => $e['message']
                 ]);
             }
 
-            foreach ($optionsArray as $index => $optText) {
+            // Now insert OPTIONS:
+            foreach ($options as $index => $optText) {
                 $optStmt = oci_parse($conn, "INSERT INTO QUESTION_OPTIONS (
                     ID, QUESTION_ID, OPTION_TEXT, ORDER_BY
                 ) VALUES (
-                    QUESTION_OPTIONS_SEQ.NEXTVAL, :qid, :opt, :ord
+                    QUESTION_OPTIONS_SEQ.NEXTVAL, :qid, :opt_text, :order_no
                 )");
 
                 $orderNo = $index + 1;
                 oci_bind_by_name($optStmt, ':qid', $newQuestionId);
-                oci_bind_by_name($optStmt, ':opt', $optText);
-                oci_bind_by_name($optStmt, ':ord', $orderNo);
+                oci_bind_by_name($optStmt, ':opt_text', $optText);
+                oci_bind_by_name($optStmt, ':order_no', $orderNo);
 
                 if (!oci_execute($optStmt, OCI_NO_AUTO_COMMIT)) {
                     $e = oci_error($optStmt);
@@ -162,9 +175,10 @@ class Question extends Controller
                     oci_free_statement($optStmt);
                     oci_free_statement($stmt);
                     oci_close($conn);
+
                     return $this->response->setJSON([
                         'success' => false,
-                        'message' => '❌ Failed to insert option',
+                        'message' => '❌ Failed to insert option.',
                         'error'   => $e['message']
                     ]);
                 }
@@ -180,6 +194,7 @@ class Question extends Controller
                 'success' => true,
                 'message' => '✅ Question and options saved successfully!'
             ]);
+
         } catch (\Throwable $e) {
             return $this->response->setJSON([
                 'success' => false,

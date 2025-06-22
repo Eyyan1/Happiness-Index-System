@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1749381661;_ci_previous_url|s:42:"http://localhost:8080/index.php/survey/new";error|s:80:"❌ Exception: oci_connect(): ORA-01017: invalid username/password; logon denied";__ci_vars|a:1:{s:5:"error";s:3:"old";}

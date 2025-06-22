@@ -1,0 +1,226 @@
+ERROR - 2025-05-18 10:41:58 --> ErrorException: oci_execute(): ORA-01722: invalid number in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind()
+#7 C:\Users\USER\HappinessIndexCI\app\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Survey->show()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2025-05-18 10:41:58 --> Error: Call to a member function getFirstRow() on false
+[Method: GET, Route: survey/create]
+in SYSTEMPATH\Model.php on line 211.
+ 1 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind()
+ 2 APPPATH\Controllers\Survey.php(75): CodeIgniter\BaseModel->find()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->show()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 11:45:12 --> CodeIgniter\Validation\Exceptions\ValidationException: "after_or_equal" is not a valid rule.
+[Method: POST, Route: survey/create]
+in SYSTEMPATH\Validation\Validation.php on line 346.
+ 1 SYSTEMPATH\Validation\Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound()
+ 2 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules()
+ 3 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Survey.php(40): CodeIgniter\Controller->validate()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 11:47:56 --> ErrorException: Undefined variable $rules
+[Method: POST, Route: survey/create]
+in APPPATH\Controllers\Survey.php on line 45.
+ 1 APPPATH\Controllers\Survey.php(45): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Survey->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 11:55:25 --> ParseError: syntax error, unexpected token "if", expecting "function"
+[Method: GET, Route: survey/new]
+in APPPATH\Controllers\Survey.php on line 86.
+ 1 VENDORPATH\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 11:55:29 --> ParseError: syntax error, unexpected token "if", expecting "function"
+[Method: GET, Route: survey]
+in APPPATH\Controllers\Survey.php on line 86.
+ 1 VENDORPATH\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 12:53:55 --> ParseError: syntax error, unexpected token "public"
+[Method: GET, Route: survey/edit/7]
+in APPPATH\Controllers\Survey.php on line 140.
+ 1 VENDORPATH\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+ERROR - 2025-05-18 14:21:04 --> ErrorException: oci_execute(): ORA-01861: literal does not match format string in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(1027): CodeIgniter\Model->doUpdate()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(863): CodeIgniter\BaseModel->update()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Survey.php(211): CodeIgniter\Model->update()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Survey->update()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-05-18 19:55:46 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\app\Controllers\Question.php(74): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Question->create()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#13 {main}
+ERROR - 2025-05-18 19:59:49 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\app\Controllers\Question.php(74): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Question->create()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#13 {main}
+ERROR - 2025-05-18 21:27:28 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Question.php(70): CodeIgniter\Model->insert()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Question->create()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+ERROR - 2025-05-18 21:28:05 --> ErrorException: oci_execute(): ORA-01843: not a valid month in C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php:220
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\OCI8\Connection.php(220): oci_execute()
+#2 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\OCI8\Connection->execute()
+#3 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\BaseModel.php(839): CodeIgniter\Model->doInsert()
+#7 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\BaseModel->insert()
+#8 C:\Users\USER\HappinessIndexCI\app\Controllers\Question.php(70): CodeIgniter\Model->insert()
+#9 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Question->create()
+#10 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#14 C:\Users\USER\HappinessIndexCI\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#15 C:\Users\USER\HappinessIndexCI\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('...')
+#16 {main}
+CRITICAL - 2025-05-18 21:46:03 --> ParseError: Unclosed '{' on line 8
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 118.
+ 1 VENDORPATH\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 21:46:09 --> ParseError: Unclosed '{' on line 8
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 118.
+ 1 VENDORPATH\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+ 3 SYSTEMPATH\CodeIgniter.php(885): class_exists()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 21:48:52 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 76.
+ 1 APPPATH\Controllers\Question.php(76): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')
+CRITICAL - 2025-05-18 21:48:58 --> TypeError: oci_parse(): Argument #1 ($connection) must be of type resource, false given
+[Method: POST, Route: question/create]
+in APPPATH\Controllers\Question.php on line 76.
+ 1 APPPATH\Controllers\Question.php(76): oci_parse()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Question->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\USER\\HappinessIndexCI\\public\\index.php')

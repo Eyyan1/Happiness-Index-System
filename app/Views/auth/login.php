@@ -1,74 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login | Online Survey System</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?= view('templates/header', ['hideNavbar' => true]) ?>
 
-  <!-- Bootstrap (CDN) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<div class="container vh-100 d-flex align-items-center">
+  <div class="row w-100 justify-content-center">
+    <div class="col-md-5">
+      <h3 class="mb-4 text-center">Login</h3>
 
-  <style>
-    body {
-      background-color: #2c3e50;
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
+      <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+      <?php endif; ?>
 
-    .login-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+      <form action="<?= site_url('login') ?>" method="post">
+        <?= csrf_field() ?>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" id="email" class="form-control" required value="<?= old('email') ?>">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <button class="btn btn-primary w-100">Login</button>
+      </form>
 
-    .login-card h4 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-weight: bold;
-    }
-
-    .form-group label {
-      font-weight: 500;
-    }
-
-    .btn-primary {
-      background-color: #007bff;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="login-card">
-    <h4>Online Survey System</h4>
-
-    <?php if (!empty($error)) : ?>
-      <div class="alert alert-danger"><?= esc($error) ?></div>
-    <?php endif; ?>
-
-    <?= form_open('auth/login') ?>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" required autofocus>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">Login</button>
-    <?= form_close() ?>
+      <p class="mt-3 text-center">
+        Don’t have an account? <a href="<?= site_url('register') ?>">Register</a>
+      </p>
+    </div>
   </div>
+</div>
 
-</body>
-</html>
+<?= view('templates/footer') ?>
